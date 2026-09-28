@@ -1,0 +1,58 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		
+		<!-- SEO best practices -->
+		<meta name="description" content="RockSoftware - Performance and Innovation in Software Development. Building the future of Software." />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Raleway:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<slot />
+
+		<!-- Custom Cursor for Pointer Mode -->
+		<div id="custom-cursor"></div>
+		<script>
+			const cursor = document.getElementById('custom-cursor');
+			
+			// Show custom cursor only when hovering over clickable elements
+			document.addEventListener('mousemove', (e) => {
+				if (cursor) {
+					cursor.style.left = e.clientX + 'px';
+					cursor.style.top = e.clientY + 'px';
+				}
+			});
+
+			const addCursorEvents = () => {
+				const interactables = document.querySelectorAll('a, button, .btn, .cta-btn, [role="button"]');
+				interactables.forEach(el => {
+					el.addEventListener('mouseenter', () => {
+						if (cursor) cursor.classList.add('active');
+					});
+					el.addEventListener('mouseleave', () => {
+						if (cursor) cursor.classList.remove('active');
+					});
+				});
+			};
+
+			// Run on mount
+			addCursorEvents();
+		</script>
+	</body>
+</html>

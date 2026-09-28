@@ -1,0 +1,502 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="RockSoftware | Intelligent Solutions. Robust Build.">
+    <!-- Hero Background (first 100vh) -->
+    <div id="hero-bg" class="hero-bg"></div>
+
+	<main class="container">
+		<nav class="navbar animate-slide-down" id="navbar">
+			<div class="logo" style="display: flex; align-items: center; justify-content: center; border-radius: 10px; background-color: #f5f5f5; rotate: 45deg;">
+				<img src="/rock-logo.png" style="rotate: -45deg;" alt="RockSoftware Logo" />
+			</div>
+			<div class="nav-links">
+				<a href="#services">Services</a>
+				<a href="#about">About</a>
+				<a href="#contact" class="btn">Get Started</a>
+			</div>
+		</nav>
+
+		<header class="hero" id="hero">
+			<div class="hero-content animate-slide-up" style="animation-delay: 0.2s">
+				<div class="badge">Next-Gen Software</div>
+				<h1>Building the future of <span class="highlight">Software</span></h1>
+				<p>We deliver high-performance, robust, and scalable solutions for modern businesses. Empower your digital transformation with our intelligent solutions.</p>
+				<button class="cta-btn" id="explore-btn">
+					Explore Our Work
+				</button>
+			</div>
+			<div class="hero-visual animate-fade-in" style="animation-delay: 0.4s">
+				<div class="geometry geometry-1"></div>
+				<div class="geometry geometry-2"></div>
+				<div class="geometry geometry-3"></div>
+			</div>
+		</header>
+        
+        <!-- Marquee effect for extra liveliness -->
+        <div class="marquee-container animate-fade-in" style="animation-delay: 0.6s">
+            <div class="marquee">
+                <span>ROBUST BUILD</span> • <span>INTELLIGENT SOLUTIONS</span> • <span>HIGH PERFORMANCE</span> • <span>MODERN ARCHITECTURE</span> • 
+                <span>ROBUST BUILD</span> • <span>INTELLIGENT SOLUTIONS</span> • <span>HIGH PERFORMANCE</span> • <span>MODERN ARCHITECTURE</span> • 
+            </div>
+        </div>
+
+		<!-- New scrollable sections -->
+		<section id="services" class="section">
+			<h2>Our <span class="highlight">Services</span></h2>
+			<p style="max-width: 600px; font-size: 1.25rem; color: #a1a1aa; line-height: 1.6;">
+				From robust backend architectures to blazing fast frontends, we deliver end-to-end digital experiences tailored for performance.
+			</p>
+			<!-- Placeholder for service cards -->
+			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+				<div style="padding: 2rem; border: 2px solid var(--border); background: var(--surface);">
+					<h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary);">01 / Development</h3>
+					<p style="color: #a1a1aa;">Custom software solutions designed to scale and perform.</p>
+				</div>
+				<div style="padding: 2rem; border: 2px solid var(--border); background: var(--surface);">
+					<h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary);">02 / Architecture</h3>
+					<p style="color: #a1a1aa;">Robust systems built on solid, modern foundations.</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="about" class="section">
+			<h2>About <span class="highlight">Us</span></h2>
+			<p style="max-width: 600px; font-size: 1.25rem; color: #a1a1aa; line-height: 1.6;">
+				RockSoftware is driven by the mission to elevate digital products. We don't just write code, we build the future.
+			</p>
+		</section>
+	</main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Useful links</h3>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Our Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>About us</h3>
+                <p>RockSoftware creates next-generation digital products. We focus on robust architecture, high performance, and scalable infrastructure for the modern web.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow us</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/rocksoftware-inc/" target="_blank">LinkedIn</a>
+                    <a href="https://www.instagram.com/rock.software" target="_blank">Instagram</a>
+                    <a href="https://github.com/rocksoftware-inc" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>CNPJ ROCKSOFTWARE TECNOLOGIA DA INFORMACAO LTDA 52.188.782/0001-38 &reg; All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        // Array with the paths to the 4 uploaded rock concert images
+        const bgImages = [
+            '/bg-1.jpg',
+            '/bg-2.jpg',
+            '/bg-3.jpg',
+            '/bg-4.jpg'
+        ];
+        
+        // Pick a random image each time the page loads
+        const randomBg = bgImages[Math.floor(Math.random() * bgImages.length)];
+        
+        // Apply it to the hero-bg element (first 100vh only) with a dark overlay
+        document.getElementById('hero-bg').style.backgroundImage = `linear-gradient(rgba(9, 9, 11, 0.7), rgba(9, 9, 11, 0.95)), url('${randomBg}')`;
+    </script>
+</Layout>
+
+<style>
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        background-size: cover;
+        background-position: center;
+    }
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem;
+        position: relative;
+	}
+
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.5rem 0;
+		border-bottom: 2px solid var(--border);
+	}
+
+	.logo img {
+		height: 48px;
+		border-radius: 8px;
+		object-fit: contain;
+	}
+
+	.nav-links {
+		display: flex;
+		gap: 2.5rem;
+		align-items: center;
+	}
+
+	.nav-links a {
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		transition: transform 0.3s, color 0.3s;
+	}
+
+	.nav-links a:not(.btn):hover {
+		color: var(--primary);
+		transform: translateY(-2px);
+	}
+
+	.btn {
+		background: var(--text);
+		color: var(--bg);
+		padding: 0.75rem 1.75rem;
+		border-radius: 4px;
+		font-weight: 800;
+		border: 2px solid var(--text);
+		transition: all 0.3s;
+	}
+
+	.btn:hover {
+		background: var(--primary);
+		color: white;
+		border-color: var(--primary);
+		transform: translate(-4px, -4px);
+		box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.2);
+	}
+
+	.hero {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 75vh;
+		position: relative;
+        padding: 4rem 0;
+	}
+
+	.hero-content {
+		flex: 1.2;
+		max-width: 650px;
+		z-index: 2;
+	}
+
+    .badge {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: rgba(244, 63, 94, 0.1);
+        color: var(--primary);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.875rem;
+        border-radius: 4px;
+        margin-bottom: 2rem;
+        border: 1px solid var(--primary);
+    }
+
+	h1 {
+		font-size: 5rem;
+		line-height: 1;
+		margin-bottom: 1.5rem;
+		font-weight: 800;
+        text-transform: uppercase;
+	}
+
+	.highlight {
+		color: var(--primary);
+        position: relative;
+        display: inline-block;
+	}
+    
+    .highlight::after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background-color: var(--primary);
+        z-index: -1;
+        opacity: 0.5;
+        transform: skewX(-20deg);
+    }
+
+	p {
+		font-size: 1.25rem;
+		color: #a1a1aa;
+		margin-bottom: 3rem;
+		line-height: 1.6;
+        max-width: 90%;
+	}
+
+	.cta-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 1rem;
+		background: var(--primary);
+		border: 2px solid var(--primary);
+		padding: 1rem 2.5rem;
+		border-radius: 4px;
+		color: white;
+		font-size: 1.125rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		cursor: pointer;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		font-family: inherit;
+		position: relative;
+	}
+
+	.cta-btn:hover {
+		transform: translate(-6px, -6px);
+		box-shadow: 6px 6px 0 var(--border);
+	}
+
+	.cursor-icon-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		background: white;
+        padding: 4px;
+	}
+
+	.cursor-icon {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.hero-visual {
+		flex: 0.8;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 400px;
+	}
+
+    .geometry {
+        position: absolute;
+        border: 2px solid var(--primary);
+    }
+
+    .geometry-1 {
+        width: 250px;
+        height: 250px;
+        border-radius: 4px;
+        animation: rotate 15s linear infinite;
+    }
+
+    .geometry-2 {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border-color: var(--text);
+        top: 20%;
+        right: 10%;
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .geometry-3 {
+        width: 100px;
+        height: 100px;
+        background: var(--primary);
+        bottom: 10%;
+        left: 20%;
+        animation: float 4s ease-in-out infinite alternate-reverse;
+    }
+
+    .marquee-container {
+        width: 100vw;
+        position: relative;
+        margin-left: calc(-50vw + 50%);
+        overflow: hidden;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        padding: 1.5rem 0;
+        background: var(--surface);
+        margin-top: 4rem;
+    }
+
+    .marquee {
+        display: flex;
+        width: max-content;
+        animation: scroll 20s linear infinite;
+        gap: 2rem;
+    }
+
+    .marquee span {
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: var(--text);
+        letter-spacing: 2px;
+        opacity: 0.7;
+    }
+
+    .section {
+        padding: 8rem 0;
+        min-height: 60vh;
+    }
+
+    .section h2 {
+        font-size: 3rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+    }
+
+	@keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+
+    @keyframes rotate {
+        100% { transform: rotate(360deg); }
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+
+    @keyframes slideUp {
+        from { opacity: 0; transform: translateY(40px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-40px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-slide-up {
+        opacity: 0;
+        animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .animate-slide-down {
+        opacity: 0;
+        animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+	@media (max-width: 768px) {
+		.hero {
+			flex-direction: column;
+			text-align: left;
+			justify-content: flex-start;
+			padding-top: 2rem;
+		}
+		
+		.nav-links {
+			display: none;
+		}
+
+		h1 {
+			font-size: 3.5rem;
+		}
+		
+		.hero-visual {
+            display: none;
+		}
+        
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+	}
+
+    /* Footer Styles */
+    .site-footer {
+        border-top: 1px solid var(--border);
+        background: var(--surface);
+        padding-top: 4rem;
+        margin-top: 4rem;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .footer-section h3 {
+        font-size: 1.25rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        color: var(--primary);
+    }
+
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .footer-section ul li a, .social-links a {
+        color: #a1a1aa;
+        transition: color 0.3s;
+        font-weight: 600;
+    }
+
+    .footer-section ul li a:hover, .social-links a:hover {
+        color: var(--primary);
+    }
+
+    .footer-section p {
+        font-size: 1rem;
+        color: #a1a1aa;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid var(--border);
+        padding: 2rem;
+        text-align: center;
+        background: var(--bg);
+    }
+
+    .footer-bottom p {
+        margin: 0;
+        font-size: 0.875rem;
+        color: #52525b;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+</style>
