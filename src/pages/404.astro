@@ -1,0 +1,225 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+	title="404: Página Não Encontrada | RockSoftware"
+	description="A página que você tentou acessar não existe ou foi movida. Retorne à página inicial da RockSoftware."
+	lang="pt-br"
+	noindex={true}
+>
+	<!-- Ambient glow orbs -->
+	<div class="ambient-orb orb-1"></div>
+	<div class="ambient-orb orb-2"></div>
+
+	<main class="container not-found-container">
+		<nav class="navbar">
+			<a href="/" class="logo-link">
+				<div class="logo" style="display: flex; align-items: center; justify-content: center; border-radius: 10px; background-color: rgb(245, 245, 245, .85); rotate: 45deg; width: 44px; height: 44px;">
+					<img src="/rock-logo.png" style="rotate: -45deg; height: 32px;" alt="RockSoftware Logo" />
+				</div>
+				<span class="logo-text font-cascadia lowercase">rock<span class="highlight">software</span></span>
+			</a>
+			<a href="/" class="btn-back font-cascadia lowercase">← voltar ao início</a>
+		</nav>
+
+		<section class="not-found-hero">
+			<div class="badge"><span class="font-cascadia lowercase">Erro 404 • Rota Não Encontrada</span></div>
+			<h1 class="error-code font-cascadia-bold">4<span class="highlight">0</span>4</h1>
+			<p class="error-desc">
+				O recurso que você tentou acessar não foi localizado em nossa infraestrutura ou foi transferido.
+			</p>
+
+			<div class="code-box font-cascadia lowercase">
+				<div class="code-line"><span class="code-dim"># status</span>: 404 Not Found</div>
+				<div class="code-line"><span class="code-dim"># destination</span>: <span class="highlight">https://rocksoftware.co/</span></div>
+			</div>
+
+			<div class="actions-row">
+				<a href="/" class="cta-btn font-cascadia-bold lowercase">
+					ir para home
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+				</a>
+				<a href="https://wa.me/5511947376930" target="_blank" class="btn-whatsapp font-cascadia lowercase">
+					<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.53 1.771.82 2.791.82 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.586-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.745 0-3.376-.454-4.806-1.246l-5.225 1.368 1.393-5.097c-.899-1.488-1.393-3.218-1.393-5.005 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+					falar no whatsapp
+				</a>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.container {
+		max-width: 1100px;
+		margin: 0 auto;
+		padding: 2rem;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		z-index: 2;
+	}
+
+	.ambient-orb {
+		position: fixed;
+		border-radius: 50%;
+		filter: blur(120px);
+		opacity: 0.1;
+		pointer-events: none;
+		z-index: 1;
+	}
+
+	.orb-1 {
+		width: 500px;
+		height: 500px;
+		background: var(--primary);
+		top: -100px;
+		right: -100px;
+	}
+
+	.orb-2 {
+		width: 400px;
+		height: 400px;
+		background: #8b5cf6;
+		bottom: 10%;
+		left: -100px;
+	}
+
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.5rem 0;
+		border-bottom: 1px solid var(--border);
+	}
+
+	.logo-link {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		text-decoration: none;
+	}
+
+	.logo-text {
+		font-size: 1.15rem;
+		font-weight: 700;
+		color: #ffffff;
+	}
+
+	.btn-back {
+		color: #a1a1aa;
+		font-size: 0.9rem;
+		transition: color 0.2s;
+	}
+
+	.btn-back:hover {
+		color: var(--primary);
+	}
+
+	.not-found-hero {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 4rem 1rem;
+	}
+
+	.error-code {
+		font-size: clamp(5rem, 15vw, 9rem);
+		line-height: 1;
+		margin: 1.5rem 0 1rem 0;
+		letter-spacing: -2px;
+	}
+
+	.error-desc {
+		font-size: 1.15rem;
+		color: #a1a1aa;
+		max-width: 540px;
+		line-height: 1.7;
+		margin-bottom: 2rem;
+	}
+
+	.code-box {
+		background: rgba(18, 18, 22, 0.8);
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		border-radius: 10px;
+		padding: 1rem 1.75rem;
+		margin-bottom: 2.5rem;
+		text-align: left;
+		display: inline-flex;
+		flex-direction: column;
+		gap: 0.4rem;
+		font-size: 0.85rem;
+	}
+
+	.code-dim {
+		color: #71717a;
+	}
+
+	.actions-row {
+		display: flex;
+		gap: 1.25rem;
+		align-items: center;
+	}
+
+	.cta-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.75rem;
+		background: var(--primary);
+		border: 2px solid var(--primary);
+		padding: 0.85rem 1.75rem;
+		border-radius: 6px;
+		color: white;
+		font-size: 0.95rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-decoration: none;
+		transition: all 0.25s;
+	}
+
+	.cta-btn:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 10px 25px rgba(244, 63, 94, 0.35);
+	}
+
+	.btn-whatsapp {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.85rem 1.5rem;
+		border-radius: 6px;
+		background: rgba(34, 197, 94, 0.1);
+		border: 1px solid rgba(34, 197, 94, 0.3);
+		color: #22c55e;
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-decoration: none;
+		transition: all 0.25s;
+	}
+
+	.btn-whatsapp:hover {
+		background: #22c55e;
+		color: #fff;
+		transform: translateY(-2px);
+	}
+
+	@media (max-width: 640px) {
+		.container {
+			padding: 1rem;
+		}
+
+		.actions-row {
+			flex-direction: column;
+			width: 100%;
+		}
+
+		.cta-btn, .btn-whatsapp {
+			width: 100%;
+			justify-content: center;
+		}
+	}
+</style>

@@ -8,10 +8,12 @@ interface Props {
 	lang?: string;
 	image?: string;
 	canonical?: string;
+	noindex?: boolean;
 }
 
 const {
 	lang = "pt-br",
+	noindex = false,
 	title = lang === "pt-br"
 		? "RockSoftware | Software House & Desenvolvimento de Software de Alta Performance"
 		: "RockSoftware | Next-Gen Software House & High-Performance Engineering",
@@ -250,9 +252,15 @@ const schemaData = {
 		<meta name="color-scheme" content="dark" />
 
 		<!-- Search Engine Crawlers & Indexing -->
-		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-		<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-		<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+		{noindex ? (
+			<meta name="robots" content="noindex, follow" />
+		) : (
+			<>
+				<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+				<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+				<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+			</>
+		)}
 
 		<!-- Canonical & Multilingual Alternate Hreflang Tags -->
 		<link rel="canonical" href={canonicalURL} />
