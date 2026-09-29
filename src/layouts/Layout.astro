@@ -21,7 +21,7 @@ const {
 	keywords = lang === "pt-br"
 		? "software house, desenvolvimento de software, desenvolvimento de aplicativos, desenvolvimento web, consultoria de software, inteligência artificial, react, nodejs, rust, computação em nuvem, são paulo, alphaville, rocksoftware"
 		: "software development, software house, custom software engineering, full stack development, cloud architecture, high performance web, ai integration, react, nodejs, rust, rocksoftware",
-	image = "/logo.jpg",
+	image = "/og-image.jpg",
 	canonical,
 } = Astro.props;
 
@@ -70,6 +70,14 @@ const schemaData = {
 			"priceRange": "$$",
 			"telephone": "+5511947376930",
 			"email": "bizzness@rocksoftware.co",
+			"aggregateRating": {
+				"@type": "AggregateRating",
+				"ratingValue": "5.0",
+				"bestRating": "5",
+				"worstRating": "1",
+				"ratingCount": "19",
+				"reviewCount": "19"
+			},
 			"description": isPt
 				? "Desenvolvimento de software de alta performance, aplicativos mobile, engenharia web, inteligência artificial e consultoria em arquitetura cloud."
 				: "High-performance software engineering, mobile applications, web systems, artificial intelligence, and cloud architecture consulting.",
@@ -93,6 +101,54 @@ const schemaData = {
 				"@id": `${siteUrl}/#organization`
 			},
 			"inLanguage": ["pt-BR", "en-US"]
+		},
+		{
+			"@type": "BreadcrumbList",
+			"@id": `${siteUrl}/#breadcrumb`,
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": siteUrl
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": isPt ? "Serviços" : "Services",
+					"item": `${siteUrl}/#services`
+				},
+				{
+					"@type": "ListItem",
+					"position": 3,
+					"name": "Cases",
+					"item": `${siteUrl}/#cases`
+				},
+				{
+					"@type": "ListItem",
+					"position": 4,
+					"name": isPt ? "Sobre" : "About",
+					"item": `${siteUrl}/#about`
+				},
+				{
+					"@type": "ListItem",
+					"position": 5,
+					"name": isPt ? "Orçamento" : "Quote",
+					"item": `${siteUrl}/#quote`
+				},
+				{
+					"@type": "ListItem",
+					"position": 6,
+					"name": "FAQ",
+					"item": `${siteUrl}/#faq`
+				},
+				{
+					"@type": "ListItem",
+					"position": 7,
+					"name": isPt ? "Contato" : "Contact",
+					"item": `${siteUrl}/#contact`
+				}
+			]
 		},
 		{
 			"@type": "FAQPage",
@@ -213,8 +269,9 @@ const schemaData = {
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content={socialImageURL} />
 		<meta property="og:image:secure_url" content={socialImageURL} />
-		<meta property="og:image:width" content="1000" />
-		<meta property="og:image:height" content="1000" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:type" content="image/jpeg" />
 		<meta property="og:image:alt" content="RockSoftware - Intelligent Solutions. Robust Build." />
 		<meta property="og:locale" content={ogLocale} />
 		<meta property="og:locale:alternate" content={ogAlternateLocale} />
@@ -240,6 +297,9 @@ const schemaData = {
 		<meta name="geo.placename" content="Barueri, Alphaville, São Paulo" />
 		<meta name="geo.position" content="-23.4984;-46.8529" />
 		<meta name="ICBM" content="-23.4984, -46.8529" />
+
+		<!-- Preload Critical LCP Asset -->
+		<link rel="preload" as="image" href="/bg-1.jpg" type="image/jpeg" fetchpriority="high" />
 
 		<!-- Preconnect and Performance -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
