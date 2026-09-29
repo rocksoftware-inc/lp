@@ -1,9 +1,56 @@
+@import "tailwindcss";
+@import "@fontsource/cascadia-code";
+@import "@fontsource/cascadia-code/400-italic.css";
+@import "@fontsource/cascadia-code/700.css";
+@import "@fontsource/cascadia-code/700-italic.css";
+
+@theme {
+  --font-vibes: "Great Vibes", cursive;
+  --font-cascadia: "Cascadia Code", "Cascadia Code PL", monospace;
+}
+
 :root {
   --primary: #f43f5e; /* Vibrant rose/red matching the logo energy */
   --bg: #09090b;
   --text: #ffffff;
   --surface: #18181b;
   --border: rgba(255, 255, 255, 0.1);
+}
+
+@layer utilities {
+  .font-cascadia-mono {
+    font-family: "Cascadia Code", monospace !important;
+  }
+
+  .font-cascadia-bold,
+  .font-cascadia-bold * {
+    font-family: "Cascadia Code", monospace !important;
+    font-weight: 700 !important;
+    font-style: italic !important;
+    letter-spacing: normal !important;
+    text-transform: lowercase !important;
+    font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+    font-feature-settings:
+      "liga" 1,
+      "dlig" 1,
+      "calt" 1,
+      "ss01" 1 !important;
+  }
+
+  .font-cascadia,
+  .font-cascadia * {
+    font-family: "Cascadia Code", monospace !important;
+    font-weight: 400 !important;
+    font-style: italic !important;
+    letter-spacing: normal !important;
+    text-transform: lowercase !important;
+    font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+    font-feature-settings:
+      "liga" 1,
+      "dlig" 1,
+      "calt" 1,
+      "ss01" 1 !important;
+  }
 }
 
 * {
@@ -19,9 +66,9 @@ body {
   color: var(--text);
   overflow-x: hidden;
   scroll-behavior: smooth;
-  
+
   /* Modern continuous tech grid */
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
@@ -36,9 +83,9 @@ a {
 a:hover,
 button:hover,
 .btn:hover,
-.cta-btn:hover {
+.explore .cta-btn > button:hover {
   /* Hide the native pointer cursor when our custom cursor is active */
-  cursor: none;
+  cursor: none !important;
 }
 
 #custom-cursor {
@@ -71,8 +118,4 @@ button:hover,
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.animate-fade-in {
-  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
