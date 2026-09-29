@@ -21,8 +21,8 @@ const {
 		? "A RockSoftware é uma software house especializada em desenvolvimento de software de alta performance, aplicativos web e mobile, arquitetura cloud e soluções inteligentes com IA."
 		: "RockSoftware is an elite software engineering company delivering high-performance web and mobile apps, scalable cloud architectures, and intelligent AI solutions.",
 	keywords = lang === "pt-br"
-		? "software house, desenvolvimento de software, desenvolvimento de aplicativos, desenvolvimento web, consultoria de software, inteligência artificial, react, nodejs, rust, computação em nuvem, são paulo, alphaville, rocksoftware"
-		: "software development, software house, custom software engineering, full stack development, cloud architecture, high performance web, ai integration, react, nodejs, rust, rocksoftware",
+		? "software house, desenvolvimento de software, desenvolvimento de aplicativos, desenvolvimento web, consultoria de software, inteligência artificial, react, nodejs, rust, computação em nuvem, são paulo, alphaville, rocksoftware, rock software, rocks software, rocking software, softwares, rocker software"
+		: "software development, software house, custom software engineering, full stack development, cloud architecture, high performance web, ai integration, react, nodejs, rust, rocksoftware, rock software, rocks software, rocking software, softwares, rocker software",
 	image = "/og-image.jpg",
 	canonical,
 } = Astro.props;
@@ -295,7 +295,11 @@ const schemaData = {
 		<meta name="twitter:image:alt" content="RockSoftware - Intelligent Solutions. Robust Build." />
 
 		<!-- Favicons & Touch Icons -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<!-- Web App Manifest -->
 		<link rel="manifest" href="/site.webmanifest" />
