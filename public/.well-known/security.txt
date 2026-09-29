@@ -1,0 +1,7 @@
+Contact: mailto:bizzness@rocksoftware.co
+Contact: https://wa.me/5511947376930
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: pt, en
+Canonical: https://rocksoftware.co/.well-known/security.txt
+Policy: https://rocksoftware.co/
+Acknowledgments: https://rocksoftware.co/

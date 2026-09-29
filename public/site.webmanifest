@@ -1,0 +1,23 @@
+{
+  "name": "RockSoftware | Software House & Engenharia de Software",
+  "short_name": "RockSoftware",
+  "description": "Engenharia de software sob medida, desenvolvimento web e mobile de alta performance e soluções inteligentes com IA.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#f43f5e",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}

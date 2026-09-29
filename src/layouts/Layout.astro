@@ -93,6 +93,85 @@ const schemaData = {
 				"@id": `${siteUrl}/#organization`
 			},
 			"inLanguage": ["pt-BR", "en-US"]
+		},
+		{
+			"@type": "FAQPage",
+			"@id": `${siteUrl}/#faq`,
+			"mainEntity": isPt ? [
+				{
+					"@type": "Question",
+					"name": "Quanto tempo leva para desenvolver um MVP ou software com a RockSoftware?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Entregamos MVPs ágeis e funcionais entre 2 a 6 semanas, utilizando metodologias ágeis, arquitetura modular e ciclos rápidos de validação com o cliente."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Quais tecnologias a RockSoftware utiliza nos projetos?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Trabalhamos com tecnologias modernas de alta performance, incluindo React, Next.js, Astro, TypeScript, Node.js, Go, Rust, Python para IA, PostgreSQL, Redis e soluções cloud em AWS e Cloudflare."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Como funciona o suporte e manutenção após a entrega?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Oferecemos garantia técnica, planos de evolução contínua, monitoramento 24/7 com alta disponibilidade (99.99%) e SLAs de atendimento prioritário."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "A RockSoftware atende empresas de qualquer região?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Sim! Nossa sede está em Alphaville (São Paulo), mas atendemos clientes em todo o Brasil e no exterior (EUA, Europa e América Latina) com squads dedicados e comunicação ágil."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Como solicitar uma estimativa ou proposta de desenvolvimento?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Você pode simular seu projeto diretamente em nosso simulador de orçamento em https://rocksoftware.co/#quote, enviar um e-mail para bizzness@rocksoftware.co ou chamar via WhatsApp (+55 11 94737-6930) com resposta em até 2 horas úteis."
+					}
+				}
+			] : [
+				{
+					"@type": "Question",
+					"name": "How long does it take to develop an MVP with RockSoftware?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "We deliver production-ready, agile MVPs in 2 to 6 weeks using modern modular architecture and fast iterative development cycles."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "What tech stack does RockSoftware specialize in?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "We specialize in high-performance stacks including React, Next.js, Astro, TypeScript, Node.js, Go, Rust, Python AI engineering, PostgreSQL, Redis, and cloud infrastructure on AWS and Cloudflare."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Do you offer post-launch support and maintenance?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Yes, we provide technical warranties, continuous feature scaling, 24/7 infrastructure monitoring (99.99% uptime), and dedicated SLA support."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Does RockSoftware work with international clients?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Yes! Headquartered in Alphaville / São Paulo, we partner with clients worldwide across North America, Europe, and Latin America with dedicated remote squads."
+					}
+				}
+			]
 		}
 	]
 };
@@ -153,7 +232,14 @@ const schemaData = {
 		<!-- Favicons & Touch Icons -->
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<link rel="shortcut icon" href="/favicon.ico" />
-		<link rel="apple-touch-icon" href="/favicon.png" />
+		<!-- Web App Manifest -->
+		<link rel="manifest" href="/site.webmanifest" />
+
+		<!-- Geotagging & Local SEO (Alphaville / São Paulo) -->
+		<meta name="geo.region" content="BR-SP" />
+		<meta name="geo.placename" content="Barueri, Alphaville, São Paulo" />
+		<meta name="geo.position" content="-23.4984;-46.8529" />
+		<meta name="ICBM" content="-23.4984, -46.8529" />
 
 		<!-- Preconnect and Performance -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
