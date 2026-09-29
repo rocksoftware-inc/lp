@@ -1,0 +1,38 @@
+# RockSoftware
+
+> RockSoftware é uma software house boutique especializada em engenharia de software sob medida, desenvolvimento de aplicações web e mobile de alta performance, arquiteturas cloud escaláveis e soluções avançadas com Inteligência Artificial e Agentes Autônomos.
+
+## Informações Corporativas
+- Nome da Empresa: RockSoftware Tecnologia da Informação Ltda
+- CNPJ: 52.188.782/0001-38
+- Sede: Alphaville, São Paulo - SP, Brasil (Atendimento Nacional e Internacional)
+- Website Oficial: https://rocksoftware.co
+- E-mail Comercial: bizzness@rocksoftware.co
+- WhatsApp Comercial: +55 11 94737-6930
+- LinkedIn: https://www.linkedin.com/company/rocksoftware-inc/
+- GitHub: https://github.com/rocksoftware-inc
+- Instagram: https://www.instagram.com/rock.software
+
+## Especialidades e Serviços
+- Desenvolvimento Web & Plataformas SaaS: Arquiteturas modernas edge-first, SSR e SPAs ultra rápidas utilizando React, Next.js, Astro e TypeScript.
+- Aplicativos Mobile Nativos e Híbridos: Apps para iOS e Android com UX intuitiva e alto desempenho.
+- Engenharia de Backend & APIs de Baixa Latência: Microsserviços e computação concorrente desenvolvidos em Go, Rust e Node.js.
+- Inteligência Artificial & LLMs: Agentes autônomos, sistemas RAG (Retrieval-Augmented Generation), automações inteligentes e modelos preditivos em tempo real.
+- Arquitetura Cloud, DevOps & SRE: Infraestrutura resiliente na AWS, GCP e Cloudflare com automação de CI/CD e suporte a alta disponibilidade (99.99%).
+
+## Cases de Sucesso em Produção
+- Aura Finance: Plataforma de liquidação financeira e processamento de pagamentos em tempo real (< 38ms de latência p99, +340% vazão de transações). Stack: Rust, Next.js, Kafka, ClickHouse.
+- Pulse Engine: Pipeline de dados com inferência preditiva em tempo real processando mais de 12 milhões de eventos por segundo com redução de 62% em custos de nuvem. Stack: Go, Python, Temporal, FastAPI.
+- Nexus Storefront: Plataforma headless e-commerce com arquitetura edge-first pontuando 100/100 no Google Lighthouse e aumento de 48% na taxa de conversão. Stack: Astro, TypeScript, Tailwind, Stripe.
+- Kortex Ops: Sistema corporativo de gestão operacional distribuída com sincronização offline-first e CRDTs atendendo mais de 50.000 usuários ativos. Stack: React, Node.js, CRDTs, Redis.
+
+## Diferenciais Competitivos
+- SLA Comercial Ágil: Resposta e análise preliminar de briefing em menos de 2 horas úteis.
+- Engenharia de Nível Sênior: Foco em código limpo, tipagem estrita, testes automatizados e segurança de ponta a ponta.
+- Simulador de Orçamento em Tempo Real: Estimativa imediata de arquitetura, stack e cronograma em https://rocksoftware.co/#quote.
+
+## Links Úteis
+- [Página Inicial (Português)](https://rocksoftware.co/)
+- [English Version](https://rocksoftware.co/en/)
+- [Simulador de Orçamento](https://rocksoftware.co/#quote)
+- [Fale Conosco / Contato](https://rocksoftware.co/#contact)

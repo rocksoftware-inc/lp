@@ -1,4 +1,30 @@
 User-agent: *
 Allow: /
 
+# Dedicated AI and LLM Search Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Sitemaps and Knowledge Files for LLMs / Search Engines
 Sitemap: https://rocksoftware.co/sitemap-index.xml
+# LLM Knowledge Standard: https://llmstxt.org/
+# https://rocksoftware.co/llms.txt
+# https://rocksoftware.co/llms-full.txt

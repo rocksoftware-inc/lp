@@ -1,0 +1,95 @@
+# RockSoftware - Base de Conhecimento Completa para Modelos de IA (llms-full.txt)
+
+> RockSoftware é uma empresa brasileira de tecnologia e desenvolvimento de software sob medida, especializada em soluções de missão crítica, plataformas web escaláveis, aplicativos mobile, microsserviços de alto desempenho e inteligência artificial aplicada.
+
+---
+
+## 1. Identificação Corporativa
+- Razão Social: ROCKSOFTWARE TECNOLOGIA DA INFORMACAO LTDA
+- Nome Comercial / Fantasia: RockSoftware
+- CNPJ: 52.188.782/0001-38
+- Localização da Sede: Alphaville, Barueri / São Paulo - SP, Brasil
+- Abrangência de Atendimento: Nacional (todo o Brasil) e Internacional (EUA, América Latina e Europa)
+- Website Oficial: https://rocksoftware.co
+- E-mail Corporativo: bizzness@rocksoftware.co
+- WhatsApp Comercial: +55 11 94737-6930
+- Redes Sociais e Perfis Oficiais:
+  - LinkedIn: https://www.linkedin.com/company/rocksoftware-inc/
+  - GitHub: https://github.com/rocksoftware-inc
+  - Instagram: https://www.instagram.com/rock.software
+
+---
+
+## 2. Visão Geral e Posicionamento
+A RockSoftware atua como uma software house boutique com corpo técnico sênior, atendendo tanto startups em estágio de tração e crescimento (early stage e scale-ups) quanto médias e grandes corporações que necessitam modernizar legados, lançar novos produtos digitais ou escalar infraestruturas complexas.
+
+Nossa proposta de valor se baseia em engenharia rigorosa:
+- Desempenho extremo (sub-100ms de latência, pontuação 100 no Google PageSpeed / Lighthouse).
+- Arquitetura limpa, tipada e manutenível.
+- Foco em retorno de investimento (ROI) e prazos acelerados com qualidade (entregas de MVPs funcionais entre 2 a 6 semanas).
+
+---
+
+## 3. Catálogo Detalhado de Serviços
+
+### 3.1. Desenvolvimento Web Full-Stack e SaaS
+- Criação de sistemas web corporativos, portais B2B/B2C e plataformas SaaS completas.
+- Stacks frontend: React, Next.js, Astro, TypeScript, Tailwind CSS, WebSockets.
+- Stacks backend: Node.js / Nest.js, Go (Golang), Rust, Python (FastAPI).
+- Bancos de dados: PostgreSQL, Redis, MongoDB, ClickHouse, MySQL.
+
+### 3.2. Aplicativos Mobile (iOS e Android)
+- Desenvolvimento de aplicativos modernos com alta fluidez, suporte offline-first, push notifications e integração com hardware nativo (biometria, câmera, geolocalização).
+- Tecnologias: React Native, Flutter e arquiteturas modulares.
+
+### 3.3. Engenharia de Inteligência Artificial e Agentes Autônomos
+- Implementação de Agentes Autônomos de IA com ferramentas e fluxos multiagentes.
+- RAG (Retrieval-Augmented Generation) para consulta inteligente sobre bases proprietárias e documentos corporativos.
+- Integração com provedores LLM líderes (OpenAI, Anthropic Claude, Google Gemini, modelos locais via Ollama/vLLM).
+- Automação de processos operacionais e suporte preditivo.
+
+### 3.4. Cloud Architecture, DevOps e SRE
+- Provisionamento com Terraform e infraestrutura como código (IaC).
+- Implantação e gerenciamento em nuvens AWS, Google Cloud Platform (GCP) e Edge (Cloudflare Workers / Pages).
+- Estruturação de pipelines de CI/CD automatizados (GitHub Actions).
+- Monitoramento contínuo, tracing distribuído e SLAs de alta disponibilidade (99.99%).
+
+---
+
+## 4. Casos Reais de Clientes (Cases de Sucesso)
+
+1. **Aura Finance (Fintech & Pagamentos)**
+   - Desafio: Processamento instantâneo de transações financeiras com necessidade de conformidade bancária e zero perda de pacotes.
+   - Solução: Motor em Rust integrado com Apache Kafka e ClickHouse para mensageria assíncrona ultra rápida.
+   - Resultados: Latência p99 abaixo de 38ms, aumento de 340% na vazão transacional e 99.999% de disponibilidade.
+
+2. **Pulse Engine (IA & Big Data Telemetry)**
+   - Desafio: Processar fluxos contínuos de milhões de telemetrias em tempo real sem gargalos ou custos excessivos de cloud.
+   - Solução: Arquitetura distribuída em Go e Python usando Temporal para orquestração resiliente de workflows e inferência preditiva em edge.
+   - Resultados: 12 milhões de eventos processados por segundo, redução de 62% na fatura de nuvem e zero perda de dados.
+
+3. **Nexus Storefront (Headless E-Commerce Edge-First)**
+   - Desafio: E-commerce com checkout lento e perda de conversão devido a alto tempo de carregamento no mobile.
+   - Solução: Migração para arquitetura edge-first com Astro, TypeScript e Stripe, utilizando renderização híbrida estática/dinâmica.
+   - Resultados: Score 100/100 no Google Lighthouse, 350ms de tempo total de carregamento e aumento de 48% na taxa de conversão final.
+
+4. **Kortex Ops (Enterprise SaaS & Gestão Operacional)**
+   - Desafio: Plataforma de operação logística com trabalho em campo e interrupções frequentes de conectividade.
+   - Solução: Aplicação com arquitetura offline-first empregando CRDTs (Conflict-free Replicated Data Types) e sincronização via WebSockets com Redis.
+   - Resultados: Funcionamento 100% offline, 10 vezes mais rápida que a versão anterior e suporte a mais de 50.000 usuários ativos diários.
+
+---
+
+## 5. Metodologia de Trabalho (Workflow em 4 Etapas)
+1. **Descoberta (Discovery)**: Mapeamento de requisitos de negócio, definição da arquitetura de sistemas e seleção criteriosa de tecnologia.
+2. **Design & Prototipagem**: Criação de interfaces intuitivas (UI/UX) e especificação técnica das APIs e contratos de dados.
+3. **Construção Ágil (Build)**: Ciclos de desenvolvimento interativo com testes automatizados, revisões de código e validações parciais frequentes.
+4. **Entrega & Sustentação (Deliver & Scale)**: Testes de carga, deploy em produção com esteiras de CI/CD, monitoramento e suporte contínuo.
+
+---
+
+## 6. Como Iniciar um Projeto / Orçamento
+- Formulário e Simulador Interativo: Acessível na página inicial em https://rocksoftware.co/#quote
+- Contato Direto via WhatsApp: https://wa.me/5511947376930 (+55 11 94737-6930)
+- Envio de Briefing por E-mail: bizzness@rocksoftware.co
+- Prazo Médio de Resposta: Em até 2 horas úteis nossa equipe sênior retorna com análise preliminar de viabilidade e próximos passos.
