@@ -294,7 +294,7 @@ const translatePath = useTranslatedPath(lang);
 			</div>
 
 			<!-- Filter tabs -->
-			<div class="cases-filters font-cascadia lowercase">
+			<div class="cases-filters lowercase">
 				<button type="button" class="case-filter-btn active" data-filter="all">{t('cases.filter.all')}</button>
 				<button type="button" class="case-filter-btn" data-filter="fintech">{t('cases.filter.fintech')}</button>
 				<button type="button" class="case-filter-btn" data-filter="cloud">{t('cases.filter.cloud')}</button>
@@ -308,7 +308,7 @@ const translatePath = useTranslatedPath(lang);
 					<div class="case-card-glow"></div>
 					<div class="case-header">
 						<div class="case-meta">
-							<span class="case-tag font-cascadia lowercase">{t('cases.item1.badge')}</span>
+							<span class="case-tag lowercase">{t('cases.item1.badge')}</span>
 							<h3 class="case-title">{t('cases.item1.title')}</h3>
 						</div>
 						<div class="case-arrow">
@@ -461,15 +461,15 @@ const translatePath = useTranslatedPath(lang);
 					<p>{t('about.desc')}</p>
 					<div class="stats-row">
 						<div class="stat">
-							<span class="stat-number font-cascadia-bold">50+</span>
+							<span class="stat-number">50+</span>
 							<span class="stat-label">{t('about.stats.projects')}</span>
 						</div>
 						<div class="stat">
-							<span class="stat-number font-cascadia-bold">99%</span>
+							<span class="stat-number">99%</span>
 							<span class="stat-label">{t('about.stats.uptime')}</span>
 						</div>
 						<div class="stat">
-							<span class="stat-number font-cascadia-bold">24/7</span>
+							<span class="stat-number">24/7</span>
 							<span class="stat-label">{t('about.stats.support')}</span>
 						</div>
 					</div>
@@ -477,17 +477,17 @@ const translatePath = useTranslatedPath(lang);
 				<div class="about-visual">
 					<div class="glass-card">
 						<div class="glass-icon">⚡</div>
-						<h4 class="font-cascadia lowercase">{t('about.card1.title')}</h4>
+						<h4 class="lowercase">{t('about.card1.title')}</h4>
 						<p>{t('about.card1.desc')}</p>
 					</div>
 					<div class="glass-card">
 						<div class="glass-icon">🛡️</div>
-						<h4 class="font-cascadia lowercase">{t('about.card2.title')}</h4>
+						<h4 class="lowercase">{t('about.card2.title')}</h4>
 						<p>{t('about.card2.desc')}</p>
 					</div>
 					<div class="glass-card">
 						<div class="glass-icon">📈</div>
-						<h4 class="font-cascadia lowercase">{t('about.card3.title')}</h4>
+						<h4 class="lowercase">{t('about.card3.title')}</h4>
 						<p>{t('about.card3.desc')}</p>
 					</div>
 				</div>
@@ -498,8 +498,8 @@ const translatePath = useTranslatedPath(lang);
 		<section id="quote" class="section quote-section relative py-24">
 			<div class="quote-ambient"></div>
 			<div class="section-header">
-				<div class="badge"><span class="font-cascadia lowercase">{t('quote.badge')}</span></div>
-				<h2>{t('quote.title1')} <span class="highlight font-cascadia lowercase">{t('quote.title2')}</span></h2>
+				<div class="badge"><span class="lowercase">{t('quote.badge')}</span></div>
+				<h2>{t('quote.title1')} <span class="highlight lowercase">{t('quote.title2')}</span></h2>
 				<p class="section-desc">{t('quote.subtitle')}</p>
 			</div>
 
@@ -507,90 +507,90 @@ const translatePath = useTranslatedPath(lang);
 				<div class="quote-builder">
 					<!-- Step 1: Type -->
 					<div class="quote-step">
-						<h4 class="quote-step-title font-cascadia lowercase">{t('quote.step1.title')}</h4>
+						<h4 class="quote-step-title lowercase">{t('quote.step1.title')}</h4>
 						<div class="quote-options-grid quote-types">
 							<button type="button" class="quote-opt-btn active" data-type="web" data-label={t('quote.type.web')}>
 								<span class="opt-icon">⚡</span>
-								<span class="opt-text font-cascadia lowercase">{t('quote.type.web')}</span>
+								<span class="opt-text lowercase">{t('quote.type.web')}</span>
 							</button>
 							<button type="button" class="quote-opt-btn" data-type="mobile" data-label={t('quote.type.mobile')}>
 								<span class="opt-icon">📱</span>
-								<span class="opt-text font-cascadia lowercase">{t('quote.type.mobile')}</span>
+								<span class="opt-text lowercase">{t('quote.type.mobile')}</span>
 							</button>
 							<button type="button" class="quote-opt-btn" data-type="backend" data-label={t('quote.type.backend')}>
 								<span class="opt-icon">🛡️</span>
-								<span class="opt-text font-cascadia lowercase">{t('quote.type.backend')}</span>
+								<span class="opt-text lowercase">{t('quote.type.backend')}</span>
 							</button>
 							<button type="button" class="quote-opt-btn" data-type="ai" data-label={t('quote.type.ai')}>
 								<span class="opt-icon">🧠</span>
-								<span class="opt-text font-cascadia lowercase">{t('quote.type.ai')}</span>
+								<span class="opt-text lowercase">{t('quote.type.ai')}</span>
 							</button>
 						</div>
 					</div>
 
 					<!-- Step 2: Timeline -->
 					<div class="quote-step">
-						<h4 class="quote-step-title font-cascadia lowercase">{t('quote.step2.title')}</h4>
+						<h4 class="quote-step-title lowercase">{t('quote.step2.title')}</h4>
 						<div class="quote-options-grid quote-timelines">
 							<button type="button" class="quote-opt-btn active" data-timeline="mvp" data-label={t('quote.timeline.mvp')}>
 								<span class="opt-icon">🚀</span>
-								<span class="opt-text font-cascadia lowercase">{t('quote.timeline.mvp')}</span>
+								<span class="opt-text lowercase">{t('quote.timeline.mvp')}</span>
 							</button>
 							<button type="button" class="quote-opt-btn" data-timeline="scale" data-label={t('quote.timeline.scale')}>
 								<span class="opt-icon">📈</span>
-								<span class="opt-text font-cascadia lowercase">{t('quote.timeline.scale')}</span>
+								<span class="opt-text lowercase">{t('quote.timeline.scale')}</span>
 							</button>
 							<button type="button" class="quote-opt-btn" data-timeline="enterprise" data-label={t('quote.timeline.enterprise')}>
 								<span class="opt-icon">🏛️</span>
-								<span class="opt-text font-cascadia lowercase">{t('quote.timeline.enterprise')}</span>
+								<span class="opt-text lowercase">{t('quote.timeline.enterprise')}</span>
 							</button>
 						</div>
 					</div>
 
 					<!-- Step 3: Features -->
 					<div class="quote-step">
-						<h4 class="quote-step-title font-cascadia lowercase">{t('quote.step3.title')}</h4>
+						<h4 class="quote-step-title lowercase">{t('quote.step3.title')}</h4>
 						<div class="quote-features-grid">
 							<label class="feature-checkbox active">
 								<input type="checkbox" checked value="auth" />
 								<span class="check-box">✓</span>
-								<span class="font-cascadia lowercase">{t('quote.feat.auth')}</span>
+								<span class="lowercase">{t('quote.feat.auth')}</span>
 							</label>
 							<label class="feature-checkbox active">
 								<input type="checkbox" checked value="payments" />
 								<span class="check-box">✓</span>
-								<span class="font-cascadia lowercase">{t('quote.feat.payments')}</span>
+								<span class="lowercase">{t('quote.feat.payments')}</span>
 							</label>
 							<label class="feature-checkbox">
 								<input type="checkbox" value="ai" />
 								<span class="check-box">✓</span>
-								<span class="font-cascadia lowercase">{t('quote.feat.ai')}</span>
+								<span class="lowercase">{t('quote.feat.ai')}</span>
 							</label>
 							<label class="feature-checkbox">
 								<input type="checkbox" value="realtime" />
 								<span class="check-box">✓</span>
-								<span class="font-cascadia lowercase">{t('quote.feat.realtime')}</span>
+								<span class="lowercase">{t('quote.feat.realtime')}</span>
 							</label>
 							<label class="feature-checkbox active">
 								<input type="checkbox" checked value="analytics" />
 								<span class="check-box">✓</span>
-								<span class="font-cascadia lowercase">{t('quote.feat.analytics')}</span>
+								<span class="lowercase">{t('quote.feat.analytics')}</span>
 							</label>
 							<label class="feature-checkbox active">
 								<input type="checkbox" checked value="cloud" />
 								<span class="check-box">✓</span>
-								<span class="font-cascadia lowercase">{t('quote.feat.cloud')}</span>
+								<span class="lowercase">{t('quote.feat.cloud')}</span>
 							</label>
 						</div>
 					</div>
 
 					<!-- Step 4: Briefing -->
 					<div class="quote-step">
-						<h4 class="quote-step-title font-cascadia lowercase">{t('quote.step4.title')}</h4>
+						<h4 class="quote-step-title lowercase">{t('quote.step4.title')}</h4>
 
 						<div class="quote-briefing-group">
 							<span class="form-label">{t('quote.briefing.goalLabel')}</span>
-							<div class="quote-pills-row quote-goals font-cascadia lowercase">
+							<div class="quote-pills-row quote-goals lowercase">
 								<button type="button" class="quote-pill-btn active" data-goal={t('quote.briefing.goal1')}>{t('quote.briefing.goal1')}</button>
 								<button type="button" class="quote-pill-btn" data-goal={t('quote.briefing.goal2')}>{t('quote.briefing.goal2')}</button>
 								<button type="button" class="quote-pill-btn" data-goal={t('quote.briefing.goal3')}>{t('quote.briefing.goal3')}</button>
@@ -600,7 +600,7 @@ const translatePath = useTranslatedPath(lang);
 
 						<div class="quote-briefing-group">
 							<span class="form-label">{t('quote.briefing.budgetLabel')}</span>
-							<div class="quote-pills-row quote-budgets font-cascadia lowercase">
+							<div class="quote-pills-row quote-budgets lowercase">
 								<button type="button" class="quote-pill-btn" data-budget={t('quote.briefing.budget1')}>{t('quote.briefing.budget1')}</button>
 								<button type="button" class="quote-pill-btn active" data-budget={t('quote.briefing.budget2')}>{t('quote.briefing.budget2')}</button>
 								<button type="button" class="quote-pill-btn" data-budget={t('quote.briefing.budget3')}>{t('quote.briefing.budget3')}</button>
@@ -620,7 +620,7 @@ const translatePath = useTranslatedPath(lang);
 				<div class="quote-summary-card">
 					<div class="summary-header">
 						<span class="summary-badge font-cascadia lowercase">instant blueprint</span>
-						<h3 class="summary-title font-cascadia lowercase">{t('quote.summary.title')}</h3>
+						<h3 class="summary-title lowercase">{t('quote.summary.title')}</h3>
 					</div>
 
 					<div class="summary-detail-row">
@@ -650,7 +650,7 @@ const translatePath = useTranslatedPath(lang);
 							{t('quote.summary.cta')}
 							<svg class="cta-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
 						</button>
-						<a href="https://wa.me/5511947376930" target="_blank" class="btn-whatsapp font-cascadia lowercase w-full justify-center text-center" id="quote-whatsapp-btn" style="text-align: center; justify-content: center;">
+						<a href="https://wa.me/5511947376930" target="_blank" class="btn-whatsapp lowercase w-full justify-center text-center" id="quote-whatsapp-btn" style="text-align: center; justify-content: center;">
 							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.53 1.771.82 2.791.82 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.586-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.745 0-3.376-.454-4.806-1.246l-5.225 1.368 1.393-5.097c-.899-1.488-1.393-3.218-1.393-5.005 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
 							{t('quote.summary.whatsappCta')}
 						</a>
@@ -673,7 +673,7 @@ const translatePath = useTranslatedPath(lang);
 				<div class="faq-list">
 					<div class="faq-item">
 						<button class="faq-question" type="button" aria-expanded="false">
-							<span class="faq-q-text font-cascadia lowercase">{t('faq.q1')}</span>
+							<span class="faq-q-text lowercase">{t('faq.q1')}</span>
 							<span class="faq-icon">
 								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
 							</span>
@@ -687,7 +687,7 @@ const translatePath = useTranslatedPath(lang);
 
 					<div class="faq-item">
 						<button class="faq-question" type="button" aria-expanded="false">
-							<span class="faq-q-text font-cascadia lowercase">{t('faq.q2')}</span>
+							<span class="faq-q-text lowercase">{t('faq.q2')}</span>
 							<span class="faq-icon">
 								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
 							</span>
@@ -701,7 +701,7 @@ const translatePath = useTranslatedPath(lang);
 
 					<div class="faq-item">
 						<button class="faq-question" type="button" aria-expanded="false">
-							<span class="faq-q-text font-cascadia lowercase">{t('faq.q3')}</span>
+							<span class="faq-q-text lowercase">{t('faq.q3')}</span>
 							<span class="faq-icon">
 								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
 							</span>
@@ -715,7 +715,7 @@ const translatePath = useTranslatedPath(lang);
 
 					<div class="faq-item">
 						<button class="faq-question" type="button" aria-expanded="false">
-							<span class="faq-q-text font-cascadia lowercase">{t('faq.q4')}</span>
+							<span class="faq-q-text lowercase">{t('faq.q4')}</span>
 							<span class="faq-icon">
 								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
 							</span>
@@ -729,7 +729,7 @@ const translatePath = useTranslatedPath(lang);
 
 					<div class="faq-item">
 						<button class="faq-question" type="button" aria-expanded="false">
-							<span class="faq-q-text font-cascadia lowercase">{t('faq.q5')}</span>
+							<span class="faq-q-text lowercase">{t('faq.q5')}</span>
 							<span class="faq-icon">
 								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
 							</span>
@@ -748,8 +748,8 @@ const translatePath = useTranslatedPath(lang);
 		<section id="contact" class="section contact-section relative py-24">
 			<div class="contact-ambient"></div>
 			<div class="section-header">
-				<div class="badge"><span class="font-cascadia lowercase">{t('contact.badge')}</span></div>
-				<h2>{t('contact.title1')} <span class="highlight font-cascadia lowercase">{t('contact.title2')}</span></h2>
+				<div class="badge"><span class="lowercase">{t('contact.badge')}</span></div>
+				<h2>{t('contact.title1')} <span class="highlight lowercase">{t('contact.title2')}</span></h2>
 				<p class="section-desc">{t('contact.subtitle')}</p>
 			</div>
 
@@ -761,7 +761,7 @@ const translatePath = useTranslatedPath(lang);
 							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
 						</div>
 						<div class="contact-card-content">
-							<span class="contact-label font-cascadia lowercase">{t('contact.info.email.label')}</span>
+							<span class="contact-label lowercase">{t('contact.info.email.label')}</span>
 							<a href="mailto:bizzness@rocksoftware.co" class="contact-val">bizzness@rocksoftware.co</a>
 						</div>
 					</div>
@@ -771,7 +771,7 @@ const translatePath = useTranslatedPath(lang);
 							<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.53 1.771.82 2.791.82 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.586-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.745 0-3.376-.454-4.806-1.246l-5.225 1.368 1.393-5.097c-.899-1.488-1.393-3.218-1.393-5.005 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
 						</div>
 						<div class="contact-card-content">
-							<span class="contact-label font-cascadia lowercase">{t('contact.info.whatsapp.label')}</span>
+							<span class="contact-label lowercase">{t('contact.info.whatsapp.label')}</span>
 							<a href="https://wa.me/5511947376930" target="_blank" class="contact-val">+55 11 94737-6930</a>
 						</div>
 					</div>
@@ -781,7 +781,7 @@ const translatePath = useTranslatedPath(lang);
 							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
 						</div>
 						<div class="contact-card-content">
-							<span class="contact-label font-cascadia lowercase">{t('contact.info.location.label')}</span>
+							<span class="contact-label lowercase">{t('contact.info.location.label')}</span>
 							<span class="contact-val">{t('contact.info.location.val')}</span>
 						</div>
 					</div>
@@ -791,7 +791,7 @@ const translatePath = useTranslatedPath(lang);
 							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
 						</div>
 						<div class="contact-card-content">
-							<span class="contact-label font-cascadia lowercase">{t('contact.info.sla.label')}</span>
+							<span class="contact-label lowercase">{t('contact.info.sla.label')}</span>
 							<span class="contact-val">{t('contact.info.sla.val')}</span>
 						</div>
 					</div>
@@ -838,13 +838,13 @@ const translatePath = useTranslatedPath(lang);
 								<svg class="cta-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
 							</button>
 
-							<a href="https://wa.me/5511947376930" target="_blank" class="btn-whatsapp font-cascadia lowercase">
+							<a href="https://wa.me/5511947376930" target="_blank" class="btn-whatsapp lowercase">
 								<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.53 1.771.82 2.791.82 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.586-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.745 0-3.376-.454-4.806-1.246l-5.225 1.368 1.393-5.097c-.899-1.488-1.393-3.218-1.393-5.005 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
 								{t('contact.form.whatsappDirect')}
 							</a>
 						</div>
 
-						<div id="contact-success-msg" class="contact-success-msg font-cascadia lowercase hidden">
+						<div id="contact-success-msg" class="contact-success-msg lowercase hidden">
 							✓ {t('contact.form.success')}
 						</div>
 					</form>
