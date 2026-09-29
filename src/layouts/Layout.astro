@@ -2,27 +2,167 @@
 import '../styles/global.css';
 
 interface Props {
-	title: string;
+	title?: string;
+	description?: string;
+	keywords?: string;
 	lang?: string;
+	image?: string;
+	canonical?: string;
 }
 
-const { title, lang = "pt-br" } = Astro.props;
+const {
+	lang = "pt-br",
+	title = lang === "pt-br"
+		? "RockSoftware | Software House & Desenvolvimento de Software de Alta Performance"
+		: "RockSoftware | Next-Gen Software House & High-Performance Engineering",
+	description = lang === "pt-br"
+		? "A RockSoftware é uma software house especializada em desenvolvimento de software de alta performance, aplicativos web e mobile, arquitetura cloud e soluções inteligentes com IA."
+		: "RockSoftware is an elite software engineering company delivering high-performance web and mobile apps, scalable cloud architectures, and intelligent AI solutions.",
+	keywords = lang === "pt-br"
+		? "software house, desenvolvimento de software, desenvolvimento de aplicativos, desenvolvimento web, consultoria de software, inteligência artificial, react, nodejs, rust, computação em nuvem, são paulo, alphaville, rocksoftware"
+		: "software development, software house, custom software engineering, full stack development, cloud architecture, high performance web, ai integration, react, nodejs, rust, rocksoftware",
+	image = "/logo.jpg",
+	canonical,
+} = Astro.props;
+
+const siteUrl = "https://rocksoftware.co";
+const currentPath = Astro.url.pathname;
+const canonicalURL = canonical || new URL(currentPath, siteUrl).href;
+const socialImageURL = new URL(image, siteUrl).href;
+
+const isPt = lang === "pt-br";
+const ogLocale = isPt ? "pt_BR" : "en_US";
+const ogAlternateLocale = isPt ? "en_US" : "pt_BR";
+
+const schemaData = {
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "Organization",
+			"@id": `${siteUrl}/#organization`,
+			"name": "RockSoftware",
+			"alternateName": "RockSoftware Tecnologia da Informação Ltda",
+			"legalName": "ROCKSOFTWARE TECNOLOGIA DA INFORMACAO LTDA",
+			"taxID": "52.188.782/0001-38",
+			"url": siteUrl,
+			"logo": `${siteUrl}/rock-logo.png`,
+			"image": `${siteUrl}/logo.jpg`,
+			"email": "bizzness@rocksoftware.co",
+			"telephone": "+5511947376930",
+			"sameAs": [
+				"https://www.linkedin.com/company/rocksoftware-inc/",
+				"https://github.com/rocksoftware-inc",
+				"https://www.instagram.com/rock.software"
+			],
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "São Paulo",
+				"addressRegion": "SP",
+				"addressCountry": "BR"
+			}
+		},
+		{
+			"@type": "ProfessionalService",
+			"@id": `${siteUrl}/#service`,
+			"name": "RockSoftware - Software House",
+			"url": siteUrl,
+			"image": `${siteUrl}/logo.jpg`,
+			"priceRange": "$$",
+			"telephone": "+5511947376930",
+			"email": "bizzness@rocksoftware.co",
+			"description": isPt
+				? "Desenvolvimento de software de alta performance, aplicativos mobile, engenharia web, inteligência artificial e consultoria em arquitetura cloud."
+				: "High-performance software engineering, mobile applications, web systems, artificial intelligence, and cloud architecture consulting.",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "São Paulo",
+				"addressRegion": "SP",
+				"addressCountry": "BR"
+			},
+			"areaServed": [
+				{ "@type": "Country", "name": "Brazil" },
+				{ "@type": "Country", "name": "Worldwide" }
+			]
+		},
+		{
+			"@type": "WebSite",
+			"@id": `${siteUrl}/#website`,
+			"url": siteUrl,
+			"name": "RockSoftware",
+			"publisher": {
+				"@id": `${siteUrl}/#organization`
+			},
+			"inLanguage": ["pt-BR", "en-US"]
+		}
+	]
+};
 ---
 
 <!doctype html>
 <html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
+
+		<!-- Primary SEO Meta Tags -->
 		<title>{title}</title>
-		
-		<!-- SEO best practices -->
-		<meta name="description" content="RockSoftware - Performance and Innovation in Software Development. Building the future of Software." />
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<meta name="author" content="RockSoftware" />
+		<meta name="theme-color" content="#f43f5e" />
+		<meta name="color-scheme" content="dark" />
+
+		<!-- Search Engine Crawlers & Indexing -->
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+		<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+		<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+		<!-- Canonical & Multilingual Alternate Hreflang Tags -->
+		<link rel="canonical" href={canonicalURL} />
+		<link rel="alternate" hreflang="pt-br" href="https://rocksoftware.co/" />
+		<link rel="alternate" hreflang="pt-BR" href="https://rocksoftware.co/" />
+		<link rel="alternate" hreflang="en" href="https://rocksoftware.co/en/" />
+		<link rel="alternate" hreflang="x-default" href="https://rocksoftware.co/" />
+
+		<!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="RockSoftware" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={socialImageURL} />
+		<meta property="og:image:secure_url" content={socialImageURL} />
+		<meta property="og:image:width" content="1000" />
+		<meta property="og:image:height" content="1000" />
+		<meta property="og:image:alt" content="RockSoftware - Intelligent Solutions. Robust Build." />
+		<meta property="og:locale" content={ogLocale} />
+		<meta property="og:locale:alternate" content={ogAlternateLocale} />
+
+		<!-- Twitter / X Cards -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@rocksoftware" />
+		<meta name="twitter:creator" content="@rocksoftware" />
+		<meta name="twitter:url" content={canonicalURL} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={socialImageURL} />
+		<meta name="twitter:image:alt" content="RockSoftware - Intelligent Solutions. Robust Build." />
+
+		<!-- Favicons & Touch Icons -->
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/favicon.png" />
+
+		<!-- Preconnect and Performance -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 		<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lobster&family=Raleway:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+		<!-- JSON-LD Structured Data for Google Knowledge Graph & Rich Results -->
+		<script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 	</head>
 	<body>
 		<slot />
